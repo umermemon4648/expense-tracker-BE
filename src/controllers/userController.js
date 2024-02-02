@@ -7,7 +7,7 @@ const Wallet = require("../models/Wallet/wallet");
 
 //register
 const register = async (req, res) => {
-  // #swagger.tags = ['auth']
+  // #swagger.tags = ['user']
   try {
     const { username, email, password } = req.body;
     if (!validator.isEmail(email)) {
@@ -48,7 +48,7 @@ const register = async (req, res) => {
 
 //request email verification token
 const requestEmailToken = async (req, res) => {
-  // #swagger.tags = ['auth']
+  // #swagger.tags = ['user']
 
   try {
     const { email } = req.body;
@@ -76,7 +76,7 @@ const requestEmailToken = async (req, res) => {
 
 //verify email token
 const verifyEmail = async (req, res) => {
-  // #swagger.tags = ['auth']
+  // #swagger.tags = ['user']
 
   try {
     const { email, emailVerificationToken } = req.body;
@@ -106,7 +106,7 @@ const verifyEmail = async (req, res) => {
 
 //login
 const login = async (req, res) => {
-  // #swagger.tags = ['auth']
+  // #swagger.tags = ['user']
 
   try {
     const { email, password } = req.body;
@@ -122,7 +122,11 @@ const login = async (req, res) => {
       return ErrorHandler("Email not verified", 400, req, res);
     }
     jwtToken = user.getJWTToken();
-    return SuccessHandler("Logged in successfully", 200, res);
+    return SuccessHandler(
+      { message: "Logged in successfully", jwtToken, user },
+      200,
+      res
+    );
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
@@ -130,7 +134,7 @@ const login = async (req, res) => {
 
 //logout
 const logout = async (req, res) => {
-  // #swagger.tags = ['auth']
+  // #swagger.tags = ['user']
 
   try {
     req.user = null;
@@ -142,7 +146,7 @@ const logout = async (req, res) => {
 
 //forgot password
 const forgotPassword = async (req, res) => {
-  // #swagger.tags = ['auth']
+  // #swagger.tags = ['user']
 
   try {
     const { email } = req.body;
@@ -166,7 +170,7 @@ const forgotPassword = async (req, res) => {
 
 //reset password
 const resetPassword = async (req, res) => {
-  // #swagger.tags = ['auth']
+  // #swagger.tags = ['user']
 
   try {
     const { email, passwordResetToken, password } = req.body;
@@ -192,7 +196,7 @@ const resetPassword = async (req, res) => {
 
 //update password
 const updatePassword = async (req, res) => {
-  // #swagger.tags = ['auth']
+  // #swagger.tags = ['user']
 
   try {
     const { currentPassword, newPassword } = req.body;
@@ -229,25 +233,53 @@ const updatePassword = async (req, res) => {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
-
 const createWallet = async (req, res) => {
+  // #swagger.tags = ['user']
   try {
-    const { amountInAccount, savingsAmount, cashInHand } = req.body;
+    const { accountBalance, savingsAmount, cashInHand } = req.body;
+    const isWallet = await Wallet.findOne({ user: req.user._id });
+    if (isWallet) {
+      return ErrorHandler("Wallet already Exist", 404, req, res);
+    }
+
+    if (
+      isNaN(accountBalance) ||
+      typeof accountBalance !== "number" ||
+      isNaN(savingsAmount) ||
+      typeof savingsAmount !== "number" ||
+      isNaN(cashInHand) ||
+      typeof cashInHand !== "number"
+    ) {
+      return ErrorHandler("Enter valid amount", 400, req, res);
+    }
+
     const data = await Wallet.create({
       user: req.user._id,
-      amountInAccount,
+      accountBalance,
       savingsAmount,
       cashInHand,
     });
-    await Wallet.findOne(
-      { _id: data._id, user: req.user._id },
-      {
-        $set: {
-          isUsed: true,
-        },
-      }
-    );
+    if (data) {
+      await Wallet.findOneAndUpdate(
+        { _id: data._id, user: req.user._id },
+        {
+          $set: {
+            isCreated: true,
+          },
+        }
+      );
+    }
     return SuccessHandler({ message: "Wallet Created", data }, 200, res);
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+const getWallet = async (req, res) => {
+  // #swagger.tags = ['user']
+
+  try {
+    const data = await Wallet.findOne({ user: req.user._id });
+    return SuccessHandler({ message: "Wallet fetched", data: data }, 200, res);
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
@@ -263,4 +295,5 @@ module.exports = {
   resetPassword,
   updatePassword,
   createWallet,
+  getWallet,
 };

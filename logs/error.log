@@ -1,0 +1,49 @@
+{"date":"2024-02-02T16:47:55.609Z","level":"error","message":"Category Already exist","method":"POST","service":"user-service","url":"/add"}
+{"date":"2024-02-02T16:49:33.516Z","level":"error","message":"mongoose is not defined","method":"GET","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T16:51:00.012Z","level":"error","message":"Category Already exist","method":"POST","service":"user-service","url":"/add"}
+{"date":"2024-02-02T16:51:07.949Z","level":"error","message":"Category Already exist","method":"POST","service":"user-service","url":"/add"}
+{"date":"2024-02-02T16:51:14.597Z","level":"error","message":"Category Already exist","method":"POST","service":"user-service","url":"/add"}
+{"date":"2024-02-02T16:51:17.817Z","level":"error","message":"Category Already exist","method":"POST","service":"user-service","url":"/add"}
+{"date":"2024-02-02T16:51:20.145Z","level":"error","message":"Category Already exist","method":"POST","service":"user-service","url":"/add"}
+{"date":"2024-02-02T16:53:22.826Z","level":"error","message":"Invalid category Id","method":"POST","service":"user-service","url":"/"}
+{"date":"2024-02-02T17:00:47.731Z","level":"error","message":"Enter valid amount","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T17:01:35.379Z","level":"error","message":"Expected a string but received a number","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T17:02:51.433Z","level":"error","message":"Enter valid amount","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T17:03:24.450Z","level":"error","message":"Enter valid amount","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T17:03:30.485Z","level":"error","message":"Expected a string but received a number","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T17:04:24.728Z","level":"error","message":"Wallet not found, first create wallet","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T17:05:15.940Z","level":"error","message":"Expected a string but received a number","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T17:11:28.575Z","level":"error","message":"Expected a string but received a number","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T17:11:46.585Z","level":"error","message":"Enter valid amount","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T17:11:57.475Z","level":"error","message":"Expected a string but received a number","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T17:14:27.877Z","level":"error","message":"Enter valid amount","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T17:14:52.399Z","level":"error","message":"Expected a string but received a number","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T17:15:03.905Z","level":"error","message":"Wallet not found, first create wallet","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T17:54:21.049Z","level":"error","message":"Expected a string but received a number","method":"POST","service":"user-service","url":"/wallet"}
+{"date":"2024-02-02T17:56:10.840Z","level":"error","message":"FieldPath field names may not start with '$'. Consider using $getField or $setField.","method":"POST","service":"user-service","url":"/wallet"}
+{"date":"2024-02-02T18:01:34.275Z","level":"error","message":"Wallet already Exist","method":"POST","service":"user-service","url":"/wallet"}
+{"date":"2024-02-02T18:03:12.306Z","level":"error","message":"Transaction validation failed: date: Cast to date failed for value \"any\" (type string) at path \"date\"","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T18:03:50.887Z","level":"error","message":"Transaction validation failed: date: Cast to date failed for value \"any\" (type string) at path \"date\"","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T18:03:54.934Z","level":"error","message":"Transaction validation failed: date: Cast to date failed for value \"any\" (type string) at path \"date\"","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T18:10:36.293Z","level":"error","message":"Expected a string but received a number","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T18:11:53.755Z","level":"error","message":"Expected a string but received a number","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T18:13:47.538Z","level":"error","message":"Enter valid amount","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T18:14:34.474Z","level":"error","message":"Transaction validation failed: type: `credit1` is not a valid enum value for path `type`.","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T18:16:34.274Z","level":"error","message":"Amount cann't be debited","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T18:16:42.119Z","level":"error","message":"Amount cann't be debited","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T18:16:48.572Z","level":"error","message":"Amount cann't be debited","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T18:17:34.672Z","level":"error","message":"Amount cann't be debited","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T18:18:33.349Z","level":"error","message":"Amount cann't be debited","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T18:19:05.014Z","level":"error","message":"Amount cann't be debited","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T18:19:20.944Z","level":"error","message":"Amount cann't be debited","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T18:22:49.227Z","level":"error","message":"invalid argument to $limit stage: Expected a number in: $limit: \"2\"","method":"GET","service":"user-service","url":"/?page=1&pageSize=2&search"}
+{"date":"2024-02-02T18:23:30.024Z","level":"error","message":"invalid argument to $limit stage: Expected a number in: $limit: \"2\"","method":"GET","service":"user-service","url":"/?page=1&pageSize=2"}
+{"date":"2024-02-02T18:28:38.528Z","level":"error","message":"invalid argument to $limit stage: Expected a number in: $limit: \"2\"","method":"GET","service":"user-service","url":"/?page=1&pageSize=2"}
+{"date":"2024-02-02T18:29:31.614Z","level":"error","message":"invalid argument to $limit stage: Expected a number in: $limit: \"2\"","method":"GET","service":"user-service","url":"/?page=1&pageSize=2"}
+{"date":"2024-02-02T18:48:23.478Z","level":"error","message":"Amount cann't be debited","method":"POST","service":"user-service","url":"/65bd1c3bc3e497073f55f399"}
+{"date":"2024-02-02T18:54:42.314Z","level":"error","message":"Cannot read properties of undefined (reading 'length')","method":"GET","service":"user-service","url":"/?search=any"}
+{"date":"2024-02-02T18:55:27.503Z","level":"error","message":"moment is not defined","method":"GET","service":"user-service","url":"/"}
+{"date":"2024-02-02T18:55:53.256Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"GET","service":"user-service","url":"/"}
+{"date":"2024-02-02T18:55:55.560Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"GET","service":"user-service","url":"/"}
+{"date":"2024-02-02T18:56:51.711Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"GET","service":"user-service","url":"/"}
+{"date":"2024-02-02T18:56:55.323Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"GET","service":"user-service","url":"/"}

@@ -6,7 +6,7 @@ const walletSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "user",
     },
-    amountInAccount: {
+    accountBalance: {
       type: Number,
       default: 0,
     },
@@ -18,7 +18,7 @@ const walletSchema = new Schema(
       type: Number,
       default: 0,
     },
-    isUsed: {
+    isCreated: {
       type: Boolean,
       default: false,
     },

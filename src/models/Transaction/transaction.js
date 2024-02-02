@@ -20,12 +20,13 @@ const transactionSchema = new Schema(
       ref: "Category",
     },
     amount: {
-      type: Boolean,
-      default: true,
+      type: Number,
+      default: 0,
     },
-    desc: {
-      type: Boolean,
-      default: true,
+    description: {
+      type: String,
+      trim: true,
+      default: "",
     },
     date: {
       type: Date,
